@@ -1,0 +1,392 @@
+:root {
+  --main-dark-text: #2e2f42;
+  --secondary-dark-text: #434455;
+  --accent: #4d5ae5;
+  --main-white: #fff;
+  --secondary-white: #f4f4fd;
+  --footer-text: #e7e9fc;
+  --hover-bg: #404bbf;
+
+  --main-gap-amount: 24px;
+}
+
+/* Глобальні */
+body {
+  color: var(--main-dark-text);
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  background-color: var(--main-white);
+}
+
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.logo,
+.footer-logo,
+.nav-link,
+.address-link,
+.card {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.logo,
+.nav-link,
+.card {
+  color: inherit;
+}
+
+.nav-link,
+.hero-btn,
+.filter-btn,
+.section-subtitle {
+  font-weight: 500;
+}
+
+.hero-btn,
+.filter-btn {
+  cursor: pointer;
+  font-size: inherit;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
+/* Container */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1158px;
+  padding-right: 15px;
+  padding-left: 15px;
+  /* outline: 2px solid tomato; */
+}
+
+/* .item * {
+  outline: 2px solid tomato;
+} */
+
+/* Visually hidden */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Утилітні класи */
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* Лого */
+.logo,
+.footer-logo {
+  font-family: 'Raleway';
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.logo {
+  line-height: 1.33;
+}
+
+.footer-logo {
+  color: var(--secondary-white);
+
+  line-height: 1.17;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+/* Навігація сайту */
+.header {
+  border-bottom: 1px solid var(--footer-text);
+  min-height: 72px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.nav-link,
+.address-link {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.address-link {
+  color: var(--secondary-dark-text);
+
+  font-style: normal;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.address-link:hover,
+.address-link:focus {
+  color: var(--accent);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  margin-left: 76px;
+}
+
+.address-list {
+  display: flex;
+}
+
+.address {
+  margin-left: auto;
+}
+
+.nav-list > .item + .item,
+.address-list > .item + .item {
+  margin-left: 40px;
+}
+
+/* Налаштування секцій Main*/
+.section-title {
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  text-align: center;
+
+  margin-bottom: 72px;
+}
+
+.section-subtitle {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.section-descr {
+  color: var(--secondary-dark-text);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* Футер */
+.footer {
+  /* BG для візуалізації білого тексту */
+  background: #2e2f42;
+
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.footer-descr {
+  color: var(--footer-text);
+
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+  max-width: 264px;
+  margin-top: 16px;
+}
+
+/* STUDIO сторінка */
+
+/* Герой */
+.hero {
+  /* BG для візуалізації білого тексту */
+  background: #2e2f42;
+
+  padding-top: 188px;
+  padding-bottom: 188px;
+}
+
+.hero-title {
+  color: var(--main-white);
+
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  text-align: center;
+
+  max-width: 498px;
+  margin: auto;
+}
+
+.hero-btn {
+  display: block;
+  color: var(--main-white);
+  margin: auto;
+
+  background: var(--accent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+
+  min-width: 169px;
+  padding: 16px 32px;
+  margin-top: 48px;
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: var(--hover-bg);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Переваги */
+.benefits {
+  padding-bottom: 0;
+}
+
+.benefits-list {
+  display: flex;
+  margin-left: calc(-1 * var(--main-gap-amount));
+}
+
+.benefits-list > .item {
+  flex-basis: calc(100% / 4 - var(--main-gap-amount));
+  margin-left: var(--main-gap-amount);
+}
+
+.benefits .section-descr {
+  margin-top: 8px;
+}
+
+/* Послуги */
+.service-list {
+  display: flex;
+  margin-left: calc(-1 * var(--main-gap-amount));
+}
+
+.service-list > .item {
+  flex-basis: calc(100% / 3 - var(--main-gap-amount));
+  margin-left: var(--main-gap-amount);
+}
+
+/* Команда студії */
+.team {
+  background-color: var(--secondary-white);
+}
+
+.team-list {
+  display: flex;
+  margin-left: calc(-1 * var(--main-gap-amount));
+}
+
+.team-list > .item {
+  flex-basis: calc(100% / 4 - var(--main-gap-amount));
+  margin-left: var(--main-gap-amount);
+  box-shadow: 0 1px 6px rgba(46, 47, 66, 0.08), 0 1px 1px rgba(46, 47, 66, 0.16),
+    0 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0 0 4px 4px;
+}
+
+.team-list .item-content {
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  background-color: var(--main-white);
+}
+
+.team-list .section-descr,
+.cards-list .section-descr {
+  margin-top: 8px;
+}
+
+/* Portfolio сторінка */
+
+.portfolio {
+  padding-top: 96px;
+}
+
+/* Кнопки фільтрів */
+.filter-btn {
+  color: var(--accent);
+
+  min-width: 69px;
+  padding: 12px 24px;
+
+  background: var(--secondary-white);
+  border: 1px solid var(--footer-text);
+  border-radius: 4px;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  color: var(--main-white);
+  background-color: var(--hover-bg);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-color: var(--hover-bg);
+}
+
+.filters-list {
+  display: flex;
+  justify-content: center;
+  margin-left: calc(-1 * var(--main-gap-amount));
+  margin-bottom: 72px;
+}
+
+.filters-list .item {
+  margin-left: var(--main-gap-amount);
+}
+
+/* Картки */
+.cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--main-gap-amount));
+  margin-top: -48px;
+}
+
+.cards-list > .item {
+  flex-basis: calc(100% / 3 - var(--main-gap-amount));
+  margin-left: var(--main-gap-amount);
+  margin-top: 48px;
+}
+
+.cards-list .item-content {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--footer-text);
+  border-left: 1px solid var(--footer-text);
+  border-right: 1px solid var(--footer-text);
+}
