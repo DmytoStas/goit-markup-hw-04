@@ -14,7 +14,7 @@
   --main-gap-amount: 24px;
 }
 
-/* Глобальні */
+/* * Глобальні */
 body {
   color: var(--main-dark-text);
 
@@ -29,6 +29,10 @@ h3,
 p {
   padding: 0;
   margin: 0;
+}
+
+a {
+  color: inherit;
 }
 
 img {
@@ -50,12 +54,6 @@ img {
 
   padding: 0;
   margin: 0;
-}
-
-.logo,
-.nav-link,
-.card {
-  color: inherit;
 }
 
 .nav-link,
@@ -110,14 +108,6 @@ img {
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
-}
-
-.social-link-list .social-link {
-  display: block;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  overflow: hidden;
 }
 
 /* Лого */
@@ -223,7 +213,6 @@ img {
 
 /* Футер */
 .footer {
-  /* BG для візуалізації білого тексту */
   background: #2e2f42;
 
   padding-top: 100px;
@@ -258,21 +247,28 @@ img {
 .social-link-list {
   display: flex;
   margin-top: 16px;
-  margin-left: -16px;
+  gap: 16px;
 }
 
 .social-link-list > .item {
-  margin-left: 16px;
+  width: 40px;
+  height: 40px;
 }
 
 .social-link-list .social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
   background-color: var(--footer-social-icon-bg);
+  border-radius: 50%;
 }
 
 .social-icon {
-  width: 100%;
-  height: 100%;
-  padding: 8px;
+  width: 24px;
+  height: 24px;
 }
 
 .social-link-list .social-link:hover,
@@ -280,7 +276,7 @@ img {
   background-color: var(--footer-social-icon-hover);
 }
 
-/* STUDIO сторінка */
+/* * STUDIO сторінка */
 
 /* Герой */
 .hero {
@@ -341,12 +337,11 @@ img {
 
 .benefits-list {
   display: flex;
-  margin-left: calc(-1 * var(--main-gap-amount));
+  gap: var(--main-gap-amount);
 }
 
 .benefits-list > .item {
-  flex-basis: calc(100% / 4 - var(--main-gap-amount));
-  margin-left: var(--main-gap-amount);
+  flex-basis: calc((100% - 3 * var(--main-gap-amount)) / 4);
 }
 
 .benefits .section-subtitle,
@@ -355,12 +350,11 @@ img {
 }
 
 .icon-thumb {
-  width: 264px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   height: 112px;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  padding-left: 100px;
-  padding-right: 100px;
 
   background-color: var(--secondary-white);
 }
@@ -373,12 +367,11 @@ img {
 /* Послуги */
 .service-list {
   display: flex;
-  margin-left: calc(-1 * var(--main-gap-amount));
+  gap: var(--main-gap-amount);
 }
 
 .service-list > .item {
-  flex-basis: calc(100% / 3 - var(--main-gap-amount));
-  margin-left: var(--main-gap-amount);
+  flex-basis: calc((100% - 2 * var(--main-gap-amount)) / 3);
 }
 
 /* Команда студії */
@@ -388,12 +381,11 @@ img {
 
 .team-list {
   display: flex;
-  margin-left: calc(-1 * var(--main-gap-amount));
+  gap: var(--main-gap-amount);
 }
 
 .team-list > .item {
-  flex-basis: calc(100% / 4 - var(--main-gap-amount));
-  margin-left: var(--main-gap-amount);
+  flex-basis: calc((100% - 3 * var(--main-gap-amount)) / 4);
   box-shadow: 0 1px 6px rgba(46, 47, 66, 0.08), 0 1px 1px rgba(46, 47, 66, 0.16),
     0 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0 0 4px 4px;
@@ -410,11 +402,7 @@ img {
 .team .social-link-list {
   justify-content: center;
   margin-top: 8px;
-  margin-left: calc(-1 * var(--main-gap-amount));
-}
-
-.team .social-link-list > .item {
-  margin-left: var(--main-gap-amount);
+  gap: var(--main-gap-amount);
 }
 
 .team .social-link {
@@ -422,7 +410,8 @@ img {
 }
 
 .team .social-icon {
-  padding: 12px;
+  width: 16px;
+  height: 16px;
 }
 
 .team .social-link-list .social-link:hover,
@@ -433,17 +422,20 @@ img {
 /* Наші клієнти */
 .customers-list {
   display: flex;
-  margin-left: calc(-1 * var(--main-gap-amount));
+  gap: var(--main-gap-amount);
 }
 
 .customers-list > .item {
-  margin-left: var(--main-gap-amount);
+  flex-basis: calc((100% - 5 * var(--main-gap-amount)) / 6);
+  height: 88px;
 }
 
 .customers-list .customers-link {
-  display: block;
-  width: 168px;
-  height: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 
   color: var(--customers-icon);
   border: 1px solid var(--customers-icon);
@@ -451,14 +443,9 @@ img {
 }
 
 .customers-list .customers-icon {
-  width: 100%;
-  height: 100%;
+  width: 104px;
+  height: 54px;
   fill: currentColor;
-
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 32px;
-  padding-right: 32px;
 }
 
 .customers-list .customers-link:hover,
@@ -467,7 +454,7 @@ img {
   border-color: var(--hover-bg);
 }
 
-/* Portfolio сторінка */
+/* * Portfolio сторінка */
 
 .portfolio {
   padding-top: 96px;
@@ -497,26 +484,20 @@ img {
 .filters-list {
   display: flex;
   justify-content: center;
-  margin-left: calc(-1 * var(--main-gap-amount));
+  gap: var(--main-gap-amount);
   margin-bottom: 72px;
-}
-
-.filters-list .item {
-  margin-left: var(--main-gap-amount);
 }
 
 /* Картки */
 .cards-list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * var(--main-gap-amount));
-  margin-top: -48px;
+  row-gap: 48px;
+  column-gap: var(--main-gap-amount);
 }
 
 .cards-list > .item {
-  flex-basis: calc(100% / 3 - var(--main-gap-amount));
-  margin-left: var(--main-gap-amount);
-  margin-top: 48px;
+  flex-basis: calc((100% - 2 * var(--main-gap-amount)) / 3);
 }
 
 .cards-list .card {
